@@ -411,8 +411,8 @@ const app = {
                 cells = `
                     <td class="p-3 font-medium">${item.D_in} in</td>
                     <td class="p-3"><span class="font-medium text-green-700">${T.solver_status_success}</span></td>
-                    <td class="p-3">${APP_UTILS.format(item.solution.Vin_ms, 2)} m/s</td>
-                    <td class="p-3">${APP_UTILS.format(item.solution.Vout_ms, 2)} m/s</td>
+            <td class="p-3">-</td>
+                        <td class="p-3">${APP_UTILS.format(item.solution.Vin_ms, 2)} m/s</td><td class="p-3">${APP_UTILS.format(item.solution.Vout_ms, 2)} m/s</td>
                     <td class="p-3">${APP_UTILS.format(item.solution.R_loading, 2)}</td>
                     <td class="p-3 font-medium">${APP_UTILS.format(item.solution.Preq_bar, 3)} bar</td>
                     <td class="p-3 text-right">
@@ -716,4 +716,5 @@ function updateSegmentLabels(segmentDiv) {
 
 document.addEventListener('DOMContentLoaded', () => {
      app.init();
+
 });
