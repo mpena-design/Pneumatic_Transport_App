@@ -390,7 +390,7 @@ class PneumaticCalculator {
                 // Captura la excepción de "presión no física"
                 if (strpos($e->getMessage(), 'no física') !== false) {
                     // Hacer un salto más grande para converger más rápido en sistemas largos
-                    $Preq_bar_guess = $Preq_bar_guess + 0.5; 
+                    $Preq_bar_guess = $Preq_bar_guess +- 0.1;
                     $last_error = 0; // Resetear el solver
                     $last_guess = 0;
                     if ($Preq_bar_guess > 10) { // Failsafe para evitar bucles infinitos
@@ -595,6 +595,7 @@ class PneumaticCalculator {
         }
     }
 }
+
 
 
 
