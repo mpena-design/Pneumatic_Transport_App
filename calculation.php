@@ -466,12 +466,12 @@ class PneumaticCalculator {
     public function suggestParameters($inputs, $t) { // $t (translations) added for error messages
         try {
             $report = [];
-            $standard_diameters = [4, 5, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24]; // In inches
+            $standard_diameters = [4, 5, 6, 8, 10, 12, 14, 16, 18]; // In inches
             
             $constraints = [
                 'min_vin_ms' => 9.0,
                 'max_vin_ms' => 20.0,
-                'max_vout_ms' => 32.0,
+                'max_vout_ms' => 35.0,
                 'max_r_loading' => 15.0
             ];
 
@@ -594,6 +594,7 @@ class PneumaticCalculator {
         }
     }
 }
+
 
 
 
